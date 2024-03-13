@@ -6,11 +6,15 @@ app.use(express.json());
 const videos = [
     {
       id: 1,
-      titulo: "curso node"
+      titulo: "curso node",
+      descricao: "curso de node pela alura",
+      url: "https://cursoNode.com"
     },
     {
       id: 2,
-      titulo: "curso angular"
+      titulo: "curso angular",
+      descricao: "curso de angular pela alura",
+      url: "https://cursoAngular.com"
     }
   ]
   function buscaVideo(id) {

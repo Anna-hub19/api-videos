@@ -1,7 +1,17 @@
 import express from "express";
+import conectaDb from "../config/dbConect.js";
+
 
 const app = express();
 app.use(express.json());
+const conexao = await conectaDb();
+
+conexao.on("error", (erro) => {
+  console.error("erro de conexão", erro)
+})
+conexao.once("open", () => {
+  console.log("conexão com o banco feita com sucesso")
+})
 
 const videos = [
     {
